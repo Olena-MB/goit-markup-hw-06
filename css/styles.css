@@ -833,6 +833,8 @@ img {
 .modal-icons-svg {
   fill: currentColor;
   position: absolute;
+  top: 0;
+  left: 0;
   left: 15px;
   top: 50%;
   transform: translatey(-50%);
