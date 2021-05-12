@@ -571,7 +571,7 @@
             autocomplete="on"
             novalidate
           >
-            <label class="subscribe-label join-us" for="e-mail" id="email"
+            <label class="subscribe-label join-us" for="e-mail"
               >Подпишитесь на рассылку</label
             >
             <div>
@@ -579,6 +579,7 @@
                 class="subscribe-input"
                 type="email"
                 name="email"
+                id="e-mail"
                 placeholder="E-mail"
               />
 
@@ -603,40 +604,75 @@
           </button>
 
           <h3 class="modal-title">Оставьте свои данные, мы вам перезвоним</h3>
-          <label class="modal-label" id="user_name"> Имя </label>
-          <svg class="modal-icons-svg name-svg">
-            <use href="./images/svg/symbol-defs.svg#icon-person"></use>
-          </svg>
-          <input type="text" name="user_name" />
-          <label class="modal-label" id="tel_form"> Телефон </label>
-          <input type="tel" name="tel_form" pattern="[0-9]{10}" />
+          <label class="modal-label" for="user_name"> Имя </label>
+          <div class="inputs">
+            <input
+              class="input"
+              type="text"
+              name="user_name"
+              id="user_name"
+              pattern="^[a-zA-ZА-Яа-яЁё\s]+$"
+            />
+            <svg class="modal-icons-svg name-svg">
+              <use href="./images/svg/symbol-defs.svg#icon-person"></use>
+            </svg>
+          </div>
+          <label class="modal-label" for="tel_form"> Телефон </label>
+          <div class="inputs">
+            <input
+              class="input"
+              type="tel"
+              name="tel_form"
+              id="tel_form"
+              pattern="[0-9]{10}"
+            />
 
-          <svg class="modal-icons-svg phone-modal">
-            <use href="./images/svg/symbol-defs.svg#icon-phone-modal"></use>
-          </svg>
-
-          <label class="modal-label" id="email_form"> Почта </label>
-          <input type="email" name="email_form" />
-          <svg class="modal-icons-svg mail-modal">
-            <use href="./images/svg/symbol-defs.svg#icon-mail-modal"></use>
-          </svg>
-
-          <label class="modal-label" id="text_form"> Комментарий </label>
-          <textarea
-            name="text_form"
-            placeholder="Введите текст"
-            class="textarea"
-          ></textarea>
-
-          <svg class="check-icons-svg">
+            <svg class="modal-icons-svg phone-modal">
+              <use href="./images/svg/symbol-defs.svg#icon-phone-modal"></use>
+            </svg>
+          </div>
+          <label class="modal-label" for="email_form"> Почта </label>
+          <div class="inputs textarea-cont">
+            <input
+              class="input"
+              type="email"
+              name="email_form"
+              id="email_form"
+            />
+            <svg class="modal-icons-svg mail-modal">
+              <use href="./images/svg/symbol-defs.svg#icon-mail-modal"></use>
+            </svg>
+          </div>
+          <label class="modal-label" for="text_form"> Комментарий </label>
+          <div class="inputs">
+            <textarea
+              class="textarea input"
+              id="text_form"
+              name="text_form"
+              placeholder="Введите текст"
+            ></textarea>
+          </div>
+          <!--<svg class="check-icons-svg">
             <use href="./images/svg/symbol-defs.svg#icon-check"></use>
-          </svg>
-          <input type="checkbox" />
-          <p>Соглашаюсь с рассылкой и принимаю</p>
-          <a href="" target="_blank" rel="noopener noreferrer"
-            >Условия договора</a
-          >
-
+          </svg>-->
+          <div class="checkbox-cont">
+            <input
+              type="checkbox"
+              name="user-checkbox"
+              class="checkbox is-hidden"
+              id="checkbox"
+            />
+            <label class="checkbox-label" for="checkbox"
+              >Соглашаюсь с рассылкой и принимаю
+              <a
+                href="#"
+                class="checkbox-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Условия договора</a
+              ></label
+            >
+          </div>
           <button type="submit" class="button hero-btn">Отправить</button>
         </form>
       </div>

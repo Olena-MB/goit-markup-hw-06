@@ -310,6 +310,7 @@
       </section>
     </main>
 
+    <!--футер-->
     <footer class="footer">
       <div class="container footer-cont">
         <div>
@@ -341,7 +342,7 @@
           </address>
         </div>
         <div>
-          <h3 class="titel-sm">присоединяйтесь</h3>
+          <p class="join-us">присоединяйтесь</p>
           <ul class="list social-icons socialmedia">
             <li class="social-icons-item">
               <a
@@ -392,6 +393,34 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="subscribe">
+          <form
+            class="subscribe-form"
+            name="join_us_form"
+            autocomplete="on"
+            novalidate
+          >
+            <label class="subscribe-label join-us" for="e-mail"
+              >Подпишитесь на рассылку</label
+            >
+            <div>
+              <input
+                class="subscribe-input"
+                type="email"
+                name="email"
+                id="e-mail"
+                placeholder="E-mail"
+              />
+
+              <button type="submit" class="button hero-btn send-btn">
+                Подписаться
+                <svg class="send-svg">
+                  <use href="./images/svg/symbol-defs.svg#icon-send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </footer>
