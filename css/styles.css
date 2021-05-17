@@ -925,6 +925,7 @@ img {
   border: 1px solid var(--accent-color);
   border-radius: 2px;
 }
+
 .checkbox-link:hover,
 .checkbox-link:focus-within {
   border: 1px solid var(--accent-color);
